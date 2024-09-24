@@ -8,18 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _231026_231007
+namespace _231026_231007.Views
 {
-    public partial class FormMenu : Form
+    public partial class FormCidades : Form
     {
-        public FormMenu()
+        public FormCidades()
         {
             InitializeComponent();
         }
 
-        private void FormMenu_Load(object sender, EventArgs e)
-        {
-            Banco.CriaBanco();
-        }
+        
     }
 }
