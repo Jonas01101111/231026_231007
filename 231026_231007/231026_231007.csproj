@@ -99,19 +99,56 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Banco.cs" />
+    <Compile Include="Consulta.cs" />
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormMenu.Designer.cs">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Caixa.cs" />
+    <Compile Include="Models\Cidade.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Produto.cs" />
+    <Compile Include="Models\VendaDet.cs" />
+    <Compile Include="Models\VendasCab.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\FormCaixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormCaixa.Designer.cs">
+      <DependentUpon>FormCaixa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FormCidades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FormCidades.Designer.cs">
       <DependentUpon>FormCidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormClientes.Designer.cs">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormConsultaVendaCat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormConsultaVendaCat.Designer.cs">
+      <DependentUpon>FormConsultaVendaCat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormConsultaVendaProdut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormConsultaVendaProdut.Designer.cs">
+      <DependentUpon>FormConsultaVendaProdut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\FormVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\FormVendas.Designer.cs">
+      <DependentUpon>FormVendas.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
@@ -142,8 +179,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
