@@ -12,9 +12,7 @@ namespace _231026_231007.Models
         public string nome { get; set; }
             
         public string uf { get; set; }
-    }
-
-    public void Alterar()
+        public static void Alterar()
     {
         try
         {
@@ -25,4 +23,7 @@ namespace _231026_231007.Models
             //allyson é pro player
         }
     }
+    }
+
+   
 }
