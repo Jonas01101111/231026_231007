@@ -31,10 +31,10 @@ namespace _231026_231007.Views
         {
             c = new Cidade();
             {
-                c.nome = pesquisa;
+                Cidade.nome = pesquisa;
             };
 
-            DGVCidades.DataSource = Cidade.Consultar();
+            DGVCidades.DataSource= Cidade.Consultar();
         }
 
         private void FormCidades_Load(object sender, EventArgs e)
@@ -49,8 +49,8 @@ namespace _231026_231007.Views
 
             c = new Cidade();
             {
-                c.nome = TxtCidades.Text;
-                c.uf = TxtUf.Text;
+                Cidade.nome = TxtCidades.Text;
+                Cidade.uf = TxtUf.Text;
             };
             Cidade.Incluir();
 
@@ -62,9 +62,9 @@ namespace _231026_231007.Views
         {
             if (DGVCidades.RowCount > 0)
             {
-                TxtId.Text = DGVCidades.CurrentRow.Cells["Id"].Value.ToString();
-                TxtCidades.Text = DGVCidades.CurrentRow.Cells["Nome"].Value.ToString();
-                TxtUf.Text = DGVCidades.CurrentRow.Cells["Uf"].Value.ToString();
+                TxtId.Text = DGVCidades.CurrentRow.Cells["id"].Value.ToString();
+                TxtCidades.Text = DGVCidades.CurrentRow.Cells["nome"].Value.ToString();
+                TxtUf.Text = DGVCidades.CurrentRow.Cells["uf"].Value.ToString();
             }
         }
 
@@ -74,9 +74,9 @@ namespace _231026_231007.Views
 
             c = new Cidade();
             {
-                c.id = int.Parse(TxtId.Text);
-                c.nome = TxtCidades.Text;
-                c.uf = TxtUf.Text;
+                Cidade.id = int.Parse(TxtId.Text);
+                Cidade.nome = TxtCidades.Text;
+                Cidade.uf = TxtUf.Text;
             };
 
             Cidade.Alterar();
@@ -92,7 +92,7 @@ namespace _231026_231007.Views
             { 
                 c = new Cidade();
                 {
-                    c.id = int.Parse(TxtId.Text);
+                    Cidade.id = int.Parse(TxtId.Text);
                 }
 
                 Cidade.Excluir();

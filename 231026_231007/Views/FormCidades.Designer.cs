@@ -43,9 +43,6 @@
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnPesquisa = new System.Windows.Forms.Button();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.uf = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,12 +124,7 @@
             // 
             this.DGVCidades.AllowUserToAddRows = false;
             this.DGVCidades.AllowUserToDeleteRows = false;
-            this.DGVCidades.AllowUserToOrderColumns = true;
             this.DGVCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCidades.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.nome,
-            this.uf});
             this.DGVCidades.Location = new System.Drawing.Point(26, 397);
             this.DGVCidades.Name = "DGVCidades";
             this.DGVCidades.ReadOnly = true;
@@ -189,24 +181,6 @@
             this.BtnPesquisa.Text = "Pesquisa";
             this.BtnPesquisa.UseVisualStyleBackColor = true;
             // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // uf
-            // 
-            this.uf.HeaderText = "Uf";
-            this.uf.Name = "uf";
-            this.uf.ReadOnly = true;
-            // 
             // FormCidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -259,8 +233,5 @@
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnFechar;
         private System.Windows.Forms.Button BtnPesquisa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn uf;
     }
 }

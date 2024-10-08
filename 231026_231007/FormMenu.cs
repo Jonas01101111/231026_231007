@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.CompilerServices;
+using _231026_231007.Views;
 
 namespace _231026_231007
 {
@@ -25,7 +26,8 @@ namespace _231026_231007
 
         private void cidadesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            FormCidades form = new FormCidades();
+            form.Show();
         }
     }
 }
