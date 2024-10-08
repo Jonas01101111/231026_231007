@@ -50,7 +50,7 @@ namespace _231026_231007.Views
             c = new Cidade();
             {
                 nome = TxtCidades.Text,
-                uf = TxtUf.Text
+                uf = TxtUf.Text;
             };
             c.Incluir();
 
@@ -72,11 +72,11 @@ namespace _231026_231007.Views
         {
             if(TxtId.Text == String.Empty) return;
 
-            c= new Cidade();
+            c = new Cidade();
             {
                 id = int.Parse(TxtId.Text),
                 nome = TxtCidades.Text,
-                uf = TxtUf.Text
+                uf = TxtUf.Text;
             };
 
             c.Alterar();
