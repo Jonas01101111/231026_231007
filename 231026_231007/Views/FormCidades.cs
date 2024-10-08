@@ -31,10 +31,10 @@ namespace _231026_231007.Views
         {
             c = new Cidade();
             {
-                nome = pesquisa
+                c.nome = pesquisa;
             };
 
-            DGVCidades.DataSource = c.Consultar();
+            DGVCidades.DataSource = Cidade.Consultar();
         }
 
         private void FormCidades_Load(object sender, EventArgs e)
@@ -49,10 +49,10 @@ namespace _231026_231007.Views
 
             c = new Cidade();
             {
-                nome = TxtCidades.Text,
-                uf = TxtUf.Text;
+                c.nome = TxtCidades.Text;
+                c.uf = TxtUf.Text;
             };
-            c.Incluir();
+            Cidade.Incluir();
 
             LimpaControles();
             CarregarGrid("");
@@ -74,12 +74,12 @@ namespace _231026_231007.Views
 
             c = new Cidade();
             {
-                id = int.Parse(TxtId.Text),
-                nome = TxtCidades.Text,
-                uf = TxtUf.Text;
+                c.id = int.Parse(TxtId.Text);
+                c.nome = TxtCidades.Text;
+                c.uf = TxtUf.Text;
             };
 
-            c.Alterar();
+            Cidade.Alterar();
             LimpaControles();
             CarregarGrid("");
         }
@@ -92,10 +92,10 @@ namespace _231026_231007.Views
             { 
                 c = new Cidade();
                 {
-                    id = int.Parse(TxtId.Text);
+                    c.id = int.Parse(TxtId.Text);
                 }
 
-                c.Excluir();
+                Cidade.Excluir();
 
                 LimpaControles();
                 CarregarGrid("");
