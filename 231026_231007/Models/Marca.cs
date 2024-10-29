@@ -23,7 +23,7 @@ namespace _231026_231007.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("update Cidades set nome = @nome ,uf = @uf where id = @id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("update Marcas set nome = @nome ,cnpj = @cnpj where id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", nome);
                 Banco.Comando.Parameters.AddWithValue("@cnpj", cnpj);
                 Banco.Comando.Parameters.AddWithValue("@id", id);
@@ -41,7 +41,7 @@ namespace _231026_231007.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("delete from Cidades where id = @id", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("delete from Marcas where id = @id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@id", id);
                 Banco.Comando.ExecuteNonQuery();
                 Banco.FecharConexao();
@@ -58,7 +58,7 @@ namespace _231026_231007.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("use vendas; \n insert into cidades(nome,uf) values(@nome, @uf) ", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("use vendas;insert into Marcas(nome,cnpj) values(@nome, @cnpj) ", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", nome);
                 Banco.Comando.Parameters.AddWithValue("@cnpj", cnpj);
                 Banco.Comando.ExecuteNonQuery();
@@ -75,7 +75,7 @@ namespace _231026_231007.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("use vendas; select * from Cidades where nome like @nome order by nome", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("use vendas; select * from Marcas where nome like @nome order by id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@nome", nome + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.dataTable = new DataTable();
