@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCidades));
             this.label1 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.TxtCidades = new System.Windows.Forms.TextBox();
@@ -51,15 +52,16 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(21, 17);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 23);
+            this.label1.Size = new System.Drawing.Size(76, 23);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Códigos:";
+            this.label1.Text = "Código:";
             // 
             // TxtId
             // 
-            this.TxtId.Location = new System.Drawing.Point(25, 43);
+            this.TxtId.Enabled = false;
+            this.TxtId.Location = new System.Drawing.Point(27, 43);
             this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(236, 30);
+            this.TxtId.Size = new System.Drawing.Size(94, 30);
             this.TxtId.TabIndex = 1;
             // 
             // TxtCidades
@@ -74,9 +76,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 23);
+            this.label2.Size = new System.Drawing.Size(74, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Cidades:";
+            this.label2.Text = "Cidade:";
             // 
             // TxtUf
             // 
@@ -164,12 +166,16 @@
             // 
             // BtnFechar
             // 
-            this.BtnFechar.Location = new System.Drawing.Point(772, 210);
+            this.BtnFechar.BackColor = System.Drawing.SystemColors.Menu;
+            this.BtnFechar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnFechar.BackgroundImage")));
+            this.BtnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BtnFechar.FlatAppearance.BorderSize = 0;
+            this.BtnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnFechar.Location = new System.Drawing.Point(1080, 12);
             this.BtnFechar.Name = "BtnFechar";
-            this.BtnFechar.Size = new System.Drawing.Size(115, 56);
+            this.BtnFechar.Size = new System.Drawing.Size(60, 60);
             this.BtnFechar.TabIndex = 13;
-            this.BtnFechar.Text = "Fechar";
-            this.BtnFechar.UseVisualStyleBackColor = true;
+            this.BtnFechar.UseVisualStyleBackColor = false;
             this.BtnFechar.Click += new System.EventHandler(this.BtnFechar_Click);
             // 
             // BtnPesquisa

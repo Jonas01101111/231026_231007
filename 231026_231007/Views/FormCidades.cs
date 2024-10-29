@@ -24,7 +24,7 @@ namespace _231026_231007.Views
             TxtId.Clear();
             TxtCidades.Clear(); 
             TxtPesquisa.Clear();
-            TxtPesquisa.Clear();
+            TxtUf.Clear();
         }
 
         void CarregarGrid(string pesquisa)
