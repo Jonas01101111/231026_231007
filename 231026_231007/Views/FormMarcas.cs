@@ -57,7 +57,7 @@ namespace _231026_231007.Views
                 Marca.nome = TxtNome.Text;
                 Marca.cnpj = TxtCnpj.Text;
             };
-            Cidade.Incluir();
+            Marca.Incluir();
 
             LimpaControles();
             CarregarGrid("");
@@ -65,7 +65,20 @@ namespace _231026_231007.Views
 
         private void BtnExcluir_Click(object sender, EventArgs e)
         {
+            if (TxtId.Text == "") return;
 
+            if (MessageBox.Show("Deseja Excluir a ", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                m = new Marca();
+                {
+                    Marca.id = int.Parse(TxtId.Text);
+                }
+
+                Marca.Excluir();
+
+                LimpaControles();
+                CarregarGrid("");
+            }
         }
 
         private void DGVMarcas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -80,7 +93,18 @@ namespace _231026_231007.Views
 
         private void BtnAlterar_Click(object sender, EventArgs e)
         {
+            if (TxtId.Text == String.Empty) return;
 
+            m = new Marca();
+            {
+                Marca.id = int.Parse(TxtId.Text);
+                Marca.nome = TxtNome.Text;
+                Marca.cnpj = TxtCnpj.Text;
+            };
+
+            Marca.Alterar();
+            LimpaControles();
+            CarregarGrid("");
         }
 
         private void BtnPesquisa_Click(object sender, EventArgs e)
