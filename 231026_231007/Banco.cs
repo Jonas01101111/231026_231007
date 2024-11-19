@@ -54,7 +54,7 @@ namespace _231026_231007
                 Comando = new MySqlCommand("create Database If Not Exists vendas; use vendas", Conexao);
                 Comando.ExecuteNonQuery();
 
-                Comando = new MySqlCommand("create table if not exists Cidades(id int auto_increment primary key,nome varchar(40), uf varchar(02));Create table if not exists Marcas(id auto_increment primary key,nome varchar(40), cnpj varchar(14));", Conexao);
+                Comando = new MySqlCommand("create table if not exists Cidades(id int auto_increment primary key,nome varchar(40), uf varchar(02));Create table if not exists Marcas(id int auto_increment primary key,nome varchar(40),cnpj varchar(14));", Conexao);
                 Comando.ExecuteNonQuery();
 
                 FecharConexao();
