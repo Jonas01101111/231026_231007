@@ -36,15 +36,15 @@
             this.BtnIncluir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.DGVCidades = new System.Windows.Forms.DataGridView();
+            this.TxtNome = new System.Windows.Forms.TextBox();
+            this.TxtCnpj = new System.Windows.Forms.TextBox();
+            this.DGVMarcas = new System.Windows.Forms.DataGridView();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.BtnPesquisa = new System.Windows.Forms.Button();
             this.TxtPesquisa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMarcas)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnFechar
@@ -69,6 +69,7 @@
             this.BtnExcluir.TabIndex = 18;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCancelar
             // 
@@ -87,6 +88,7 @@
             this.BtnAlterar.TabIndex = 16;
             this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = true;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click);
             // 
             // BtnIncluir
             // 
@@ -96,6 +98,7 @@
             this.BtnIncluir.TabIndex = 15;
             this.BtnIncluir.Text = "Incluir";
             this.BtnIncluir.UseVisualStyleBackColor = true;
+            this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
             // 
             // label1
             // 
@@ -115,30 +118,31 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "CNPJ:";
             // 
-            // textBox1
+            // TxtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(263, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(528, 30);
-            this.textBox1.TabIndex = 21;
+            this.TxtNome.Location = new System.Drawing.Point(263, 37);
+            this.TxtNome.Name = "TxtNome";
+            this.TxtNome.Size = new System.Drawing.Size(528, 30);
+            this.TxtNome.TabIndex = 21;
             // 
-            // textBox2
+            // TxtCnpj
             // 
-            this.textBox2.Location = new System.Drawing.Point(263, 106);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(429, 30);
-            this.textBox2.TabIndex = 22;
+            this.TxtCnpj.Location = new System.Drawing.Point(263, 106);
+            this.TxtCnpj.Name = "TxtCnpj";
+            this.TxtCnpj.Size = new System.Drawing.Size(429, 30);
+            this.TxtCnpj.TabIndex = 22;
             // 
-            // DGVCidades
+            // DGVMarcas
             // 
-            this.DGVCidades.AllowUserToAddRows = false;
-            this.DGVCidades.AllowUserToDeleteRows = false;
-            this.DGVCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCidades.Location = new System.Drawing.Point(61, 354);
-            this.DGVCidades.Name = "DGVCidades";
-            this.DGVCidades.ReadOnly = true;
-            this.DGVCidades.Size = new System.Drawing.Size(1048, 232);
-            this.DGVCidades.TabIndex = 23;
+            this.DGVMarcas.AllowUserToAddRows = false;
+            this.DGVMarcas.AllowUserToDeleteRows = false;
+            this.DGVMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVMarcas.Location = new System.Drawing.Point(61, 354);
+            this.DGVMarcas.Name = "DGVMarcas";
+            this.DGVMarcas.ReadOnly = true;
+            this.DGVMarcas.Size = new System.Drawing.Size(1048, 232);
+            this.DGVMarcas.TabIndex = 23;
+            this.DGVMarcas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVMarcas_CellClick);
             // 
             // TxtId
             // 
@@ -165,6 +169,7 @@
             this.BtnPesquisa.TabIndex = 28;
             this.BtnPesquisa.Text = "Pesquisa";
             this.BtnPesquisa.UseVisualStyleBackColor = true;
+            this.BtnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // TxtPesquisa
             // 
@@ -178,10 +183,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(44, 275);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(432, 23);
+            this.label4.Size = new System.Drawing.Size(466, 23);
             this.label4.TabIndex = 26;
             this.label4.Text = "Empresa (Digite o nome da empresa para pesquisar):";
-            
             // 
             // FormMarcas
             // 
@@ -193,9 +197,9 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.DGVCidades);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DGVMarcas);
+            this.Controls.Add(this.TxtCnpj);
+            this.Controls.Add(this.TxtNome);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnExcluir);
@@ -208,7 +212,7 @@
             this.Name = "FormMarcas";
             this.Text = "FormMarcas";
             this.Load += new System.EventHandler(this.FormMarcas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVMarcas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,9 +227,9 @@
         private System.Windows.Forms.Button BtnIncluir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView DGVCidades;
+        private System.Windows.Forms.TextBox TxtNome;
+        private System.Windows.Forms.TextBox TxtCnpj;
+        private System.Windows.Forms.DataGridView DGVMarcas;
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button BtnPesquisa;
