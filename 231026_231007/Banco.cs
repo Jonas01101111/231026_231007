@@ -56,7 +56,8 @@ namespace _231026_231007
                 Comando.ExecuteNonQuery();
 
 
-                Comando = new MySqlCommand("create table if not exists Cidades(id int auto_increment primary key,nome varchar(40), uf varchar(02));Create table if not exists Marcas(id int auto_increment primary key,nome varchar(40), cnpj varchar(14));create table if not exists Categorias(id int auto_increment primary key,categoria varchar(50));", Conexao);
+
+                Comando = new MySqlCommand("create table if not exists Cidades(id int auto_increment primary key,nome varchar(40), uf varchar(02));Create table if not exists Marcas(id int auto_increment primary key,nome varchar(40), cnpj varchar(14));create table if not exists Categorias(id int auto_increment primary key,categoria varchar(50));create table if not exists Clientes(id int auto_increment primary key ,nome varchar(50), id_cidade int, datanasc date, renda decimal(10,2), cpf char(14),foto varchar(100), venda bool);", Conexao);
 
                 Comando.ExecuteNonQuery();
            

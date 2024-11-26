@@ -186,6 +186,7 @@
             this.BtnPesquisa.TabIndex = 14;
             this.BtnPesquisa.Text = "Pesquisa";
             this.BtnPesquisa.UseVisualStyleBackColor = true;
+            this.BtnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // FormCidades
             // 

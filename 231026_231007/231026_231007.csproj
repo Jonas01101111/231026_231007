@@ -181,6 +181,9 @@
     <EmbeddedResource Include="Views\FormCidades.resx">
       <DependentUpon>FormCidades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\FormClientes.resx">
+      <DependentUpon>FormClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FormMarcas.resx">
       <DependentUpon>FormMarcas.cs</DependentUpon>
     </EmbeddedResource>
