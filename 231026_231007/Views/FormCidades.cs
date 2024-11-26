@@ -112,5 +112,10 @@ namespace _231026_231007.Views
         {
             Close();
         }
+
+        private void BtnPesquisa_Click(object sender, EventArgs e)
+        {
+            CarregarGrid(TxtPesquisa.Text);
+        }
     }
 }
