@@ -70,7 +70,7 @@ namespace _231026_231007.Models
             try
             {
                 Banco.AbrirConexao();
-                Banco.Comando = new MySqlCommand("use vendas; select * from Categorias where categoria like @categoria order by categoria", Banco.Conexao);
+                Banco.Comando = new MySqlCommand("use vendas; select * from Categorias where categoria like @categoria order by id", Banco.Conexao);
                 Banco.Comando.Parameters.AddWithValue("@categoria", categoria + "%");
                 Banco.Adaptador = new MySqlDataAdapter(Banco.Comando);
                 Banco.dataTable = new DataTable();
