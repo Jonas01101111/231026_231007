@@ -42,19 +42,21 @@
             this.label2 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.bntFechar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnPesquisa
             // 
             this.BtnPesquisa.Font = new System.Drawing.Font("Roboto Lt", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPesquisa.Location = new System.Drawing.Point(799, 231);
+            this.BtnPesquisa.Location = new System.Drawing.Point(830, 322);
             this.BtnPesquisa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnPesquisa.Name = "BtnPesquisa";
             this.BtnPesquisa.Size = new System.Drawing.Size(83, 20);
             this.BtnPesquisa.TabIndex = 29;
             this.BtnPesquisa.Text = "Pesquisa";
             this.BtnPesquisa.UseVisualStyleBackColor = true;
+            this.BtnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
             // BtnFechar
             // 
@@ -73,29 +75,31 @@
             // BtnExcluir
             // 
             this.BtnExcluir.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnExcluir.Location = new System.Drawing.Point(653, 121);
+            this.BtnExcluir.Location = new System.Drawing.Point(688, 204);
             this.BtnExcluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnExcluir.Name = "BtnExcluir";
             this.BtnExcluir.Size = new System.Drawing.Size(167, 56);
             this.BtnExcluir.TabIndex = 27;
             this.BtnExcluir.Text = "Excluir";
             this.BtnExcluir.UseVisualStyleBackColor = true;
+            this.BtnExcluir.Click += new System.EventHandler(this.BtnExcluir_Click);
             // 
             // BtnCancelar
             // 
             this.BtnCancelar.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCancelar.Location = new System.Drawing.Point(467, 122);
+            this.BtnCancelar.Location = new System.Drawing.Point(502, 205);
             this.BtnCancelar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnCancelar.Name = "BtnCancelar";
             this.BtnCancelar.Size = new System.Drawing.Size(160, 56);
             this.BtnCancelar.TabIndex = 26;
             this.BtnCancelar.Text = "Cancelar";
             this.BtnCancelar.UseVisualStyleBackColor = true;
+            this.BtnCancelar.Click += new System.EventHandler(this.BtnCancelar_Click);
             // 
             // BtnAlterar
             // 
             this.BtnAlterar.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAlterar.Location = new System.Drawing.Point(276, 121);
+            this.BtnAlterar.Location = new System.Drawing.Point(311, 204);
             this.BtnAlterar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnAlterar.Name = "BtnAlterar";
             this.BtnAlterar.Size = new System.Drawing.Size(156, 57);
@@ -109,7 +113,7 @@
             this.DGVCategorias.AllowUserToAddRows = false;
             this.DGVCategorias.AllowUserToDeleteRows = false;
             this.DGVCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCategorias.Location = new System.Drawing.Point(14, 279);
+            this.DGVCategorias.Location = new System.Drawing.Point(45, 369);
             this.DGVCategorias.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.DGVCategorias.Name = "DGVCategorias";
             this.DGVCategorias.ReadOnly = true;
@@ -120,7 +124,7 @@
             // BtnIncluir
             // 
             this.BtnIncluir.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIncluir.Location = new System.Drawing.Point(78, 121);
+            this.BtnIncluir.Location = new System.Drawing.Point(113, 204);
             this.BtnIncluir.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnIncluir.Name = "BtnIncluir";
             this.BtnIncluir.Size = new System.Drawing.Size(173, 57);
@@ -131,7 +135,7 @@
             // 
             // TxtPesquisa
             // 
-            this.TxtPesquisa.Location = new System.Drawing.Point(14, 231);
+            this.TxtPesquisa.Location = new System.Drawing.Point(45, 322);
             this.TxtPesquisa.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtPesquisa.Name = "TxtPesquisa";
             this.TxtPesquisa.Size = new System.Drawing.Size(778, 21);
@@ -140,17 +144,17 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 204);
+            this.label4.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 286);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(280, 13);
+            this.label4.Size = new System.Drawing.Size(478, 23);
             this.label4.TabIndex = 21;
             this.label4.Text = "Categoria (Digite o nome da categoria para pesquisar):";
             // 
             // TxtCategorias
             // 
-            this.TxtCategorias.Location = new System.Drawing.Point(14, 72);
+            this.TxtCategorias.Location = new System.Drawing.Point(45, 145);
             this.TxtCategorias.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtCategorias.Name = "TxtCategorias";
             this.TxtCategorias.Size = new System.Drawing.Size(867, 21);
@@ -159,11 +163,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(11, 56);
+            this.label2.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(41, 109);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
+            this.label2.Size = new System.Drawing.Size(97, 23);
             this.label2.TabIndex = 17;
             this.label2.Text = "Categoria:";
             // 
@@ -186,11 +190,25 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Código:";
             // 
+            // bntFechar
+            // 
+            this.bntFechar.BackColor = System.Drawing.SystemColors.Window;
+            this.bntFechar.BackgroundImage = global::_231026_231007.Properties.Resources.Fechar;
+            this.bntFechar.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bntFechar.Location = new System.Drawing.Point(859, 12);
+            this.bntFechar.Margin = new System.Windows.Forms.Padding(0);
+            this.bntFechar.Name = "bntFechar";
+            this.bntFechar.Size = new System.Drawing.Size(78, 72);
+            this.bntFechar.TabIndex = 30;
+            this.bntFechar.UseVisualStyleBackColor = false;
+            this.bntFechar.Click += new System.EventHandler(this.bntFechar_Click);
+            // 
             // FormCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(897, 548);
+            this.ClientSize = new System.Drawing.Size(966, 639);
+            this.Controls.Add(this.bntFechar);
             this.Controls.Add(this.BtnPesquisa);
             this.Controls.Add(this.BtnFechar);
             this.Controls.Add(this.BtnExcluir);
@@ -229,5 +247,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bntFechar;
     }
 }

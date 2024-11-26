@@ -67,12 +67,47 @@ namespace _231026_231007.Views
 
             c = new Categoria();
             {
+                Categoria.id = int.Parse(DGVCategorias.CurrentRow.Cells["id"].Value.ToString());
                 Categoria.categoria = TxtCategorias.Text;
             };
 
             Categoria.Alterar();
             LimpaControles();
             CarregarGrid("");
+        }
+
+        private void BtnExcluir_Click(object sender, EventArgs e)
+        {
+            if (DGVCategorias.CurrentRow.Cells["id"].Value.ToString() == "") return;
+
+            if (MessageBox.Show("Deseja Excluir a Cidade", "Exclusão", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                c = new Categoria();
+                {
+                    Categoria.id = int.Parse(DGVCategorias.CurrentRow.Cells["id"].Value.ToString());
+                }
+
+                Categoria.Excluir();
+
+                LimpaControles();
+                CarregarGrid("");
+            }
+        }
+
+        private void BtnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpaControles();
+            CarregarGrid("");
+        }
+
+        private void bntFechar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void BtnPesquisa_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
