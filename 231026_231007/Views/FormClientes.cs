@@ -13,11 +13,43 @@ namespace _231026_231007.Views
 {
     public partial class FormClientes : Form
     {
+        Cidade cidade;
+        Cliente cliente;
         public FormClientes()
         {
             InitializeComponent();
         }
+        void LimpaControles()
+        {
+            txtNome.Clear();
+            txtNome.Clear();
+            cboCidades.SelectedIndex = -1;
+            txtUF.Clear();
+            mskCPF.Clear();
+            txtRenda.Clear();
+            dtpDataNasc.Value = DateTime.Now;
+            picFoto.ImageLocation = "";
+            chkVenda.Checked = false;
+        }
+        void CarregarGrid(string pesquisa)
+        {
+            cidade = new Cidade();
+            {
+                Cidade.nome = pesquisa;
+            };
 
+            DGVCidades.DataSource = Cidade.Consultar();
+        }
+        private void FormClientes_Load(object sender, EventArgs e)
+        {
+            cidade = new Cidade();
+            cboCidades.DataSource= Cidade.Consultar();
+            cboCidades.DisplayMember = "nome";
+            cboCidades.ValueMember = "id";
+
+            LimpaControles();
+            carregarGrid(")
+        }
         private void BtnIncluir_Click(object sender, EventArgs e)
         {
 
@@ -47,5 +79,7 @@ namespace _231026_231007.Views
         {
 
         }
+
+        
     }
 }

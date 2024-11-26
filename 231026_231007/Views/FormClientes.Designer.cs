@@ -47,11 +47,12 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.cboCidades = new System.Windows.Forms.ComboBox();
             this.dtpDataNasc = new System.Windows.Forms.DateTimePicker();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtRenda = new System.Windows.Forms.TextBox();
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
             this.BtnPesquisa = new System.Windows.Forms.Button();
+            this.txtUF = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
             this.SuspendLayout();
@@ -132,9 +133,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(30, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 23);
+            this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Cidade:";
+            this.label3.Text = "Cidade-UF:";
             // 
             // label4
             // 
@@ -207,7 +208,7 @@
             // cboCidades
             // 
             this.cboCidades.FormattingEnabled = true;
-            this.cboCidades.Location = new System.Drawing.Point(110, 110);
+            this.cboCidades.Location = new System.Drawing.Point(142, 110);
             this.cboCidades.Name = "cboCidades";
             this.cboCidades.Size = new System.Drawing.Size(118, 31);
             this.cboCidades.TabIndex = 29;
@@ -220,12 +221,12 @@
             this.dtpDataNasc.Size = new System.Drawing.Size(181, 30);
             this.dtpDataNasc.TabIndex = 30;
             // 
-            // textBox3
+            // txtRenda
             // 
-            this.textBox3.Location = new System.Drawing.Point(400, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 30);
-            this.textBox3.TabIndex = 31;
+            this.txtRenda.Location = new System.Drawing.Point(400, 166);
+            this.txtRenda.Name = "txtRenda";
+            this.txtRenda.Size = new System.Drawing.Size(120, 30);
+            this.txtRenda.TabIndex = 31;
             // 
             // txtPesquisa
             // 
@@ -264,16 +265,24 @@
             this.BtnPesquisa.UseVisualStyleBackColor = true;
             this.BtnPesquisa.Click += new System.EventHandler(this.BtnPesquisa_Click);
             // 
+            // txtUF
+            // 
+            this.txtUF.Location = new System.Drawing.Point(269, 111);
+            this.txtUF.Name = "txtUF";
+            this.txtUF.Size = new System.Drawing.Size(41, 30);
+            this.txtUF.TabIndex = 36;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1152, 641);
+            this.Controls.Add(this.txtUF);
             this.Controls.Add(this.BtnPesquisa);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.txtPesquisa);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtRenda);
             this.Controls.Add(this.dtpDataNasc);
             this.Controls.Add(this.cboCidades);
             this.Controls.Add(this.txtID);
@@ -296,6 +305,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "FormClientes";
             this.Text = "FormClientes";
+            this.Load += new System.EventHandler(this.FormClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).EndInit();
             this.ResumeLayout(false);
@@ -323,10 +333,11 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.ComboBox cboCidades;
         private System.Windows.Forms.DateTimePicker dtpDataNasc;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtRenda;
         private System.Windows.Forms.TextBox txtPesquisa;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.DataGridView dgvClientes;
         private System.Windows.Forms.Button BtnPesquisa;
+        private System.Windows.Forms.TextBox txtUF;
     }
 }

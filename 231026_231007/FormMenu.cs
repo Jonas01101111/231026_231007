@@ -41,5 +41,11 @@ namespace _231026_231007
             FormCategorias form = new FormCategorias();
             form.Show();
         }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClientes form = new FormClientes();
+            form.Show();
+        }
     }
 }
