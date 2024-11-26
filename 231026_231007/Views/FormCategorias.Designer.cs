@@ -1,6 +1,6 @@
 ﻿namespace _231026_231007.Views
 {
-    partial class Categorias
+    partial class FormCategorias
     {
         /// <summary>
         /// Required designer variable.
@@ -28,21 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Categorias));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCategorias));
             this.BtnPesquisa = new System.Windows.Forms.Button();
             this.BtnFechar = new System.Windows.Forms.Button();
             this.BtnExcluir = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.BtnAlterar = new System.Windows.Forms.Button();
-            this.DGVCidades = new System.Windows.Forms.DataGridView();
+            this.DGVCategorias = new System.Windows.Forms.DataGridView();
             this.BtnIncluir = new System.Windows.Forms.Button();
             this.TxtPesquisa = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.TxtCidades = new System.Windows.Forms.TextBox();
+            this.TxtCategorias = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.TxtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCidades)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).BeginInit();
             this.SuspendLayout();
             // 
             // BtnPesquisa
@@ -102,18 +102,20 @@
             this.BtnAlterar.TabIndex = 25;
             this.BtnAlterar.Text = "Alterar";
             this.BtnAlterar.UseVisualStyleBackColor = true;
+            this.BtnAlterar.Click += new System.EventHandler(this.BtnAlterar_Click_1);
             // 
-            // DGVCidades
+            // DGVCategorias
             // 
-            this.DGVCidades.AllowUserToAddRows = false;
-            this.DGVCidades.AllowUserToDeleteRows = false;
-            this.DGVCidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DGVCidades.Location = new System.Drawing.Point(14, 279);
-            this.DGVCidades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.DGVCidades.Name = "DGVCidades";
-            this.DGVCidades.ReadOnly = true;
-            this.DGVCidades.Size = new System.Drawing.Size(868, 232);
-            this.DGVCidades.TabIndex = 24;
+            this.DGVCategorias.AllowUserToAddRows = false;
+            this.DGVCategorias.AllowUserToDeleteRows = false;
+            this.DGVCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DGVCategorias.Location = new System.Drawing.Point(14, 279);
+            this.DGVCategorias.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.DGVCategorias.Name = "DGVCategorias";
+            this.DGVCategorias.ReadOnly = true;
+            this.DGVCategorias.Size = new System.Drawing.Size(868, 232);
+            this.DGVCategorias.TabIndex = 24;
+            this.DGVCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVCategorias_CellClick);
             // 
             // BtnIncluir
             // 
@@ -125,6 +127,7 @@
             this.BtnIncluir.TabIndex = 23;
             this.BtnIncluir.Text = "Incluir";
             this.BtnIncluir.UseVisualStyleBackColor = true;
+            this.BtnIncluir.Click += new System.EventHandler(this.BtnIncluir_Click);
             // 
             // TxtPesquisa
             // 
@@ -145,13 +148,13 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Categoria (Digite o nome da categoria para pesquisar):";
             // 
-            // TxtCidades
+            // TxtCategorias
             // 
-            this.TxtCidades.Location = new System.Drawing.Point(14, 72);
-            this.TxtCidades.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TxtCidades.Name = "TxtCidades";
-            this.TxtCidades.Size = new System.Drawing.Size(867, 21);
-            this.TxtCidades.TabIndex = 18;
+            this.TxtCategorias.Location = new System.Drawing.Point(14, 72);
+            this.TxtCategorias.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TxtCategorias.Name = "TxtCategorias";
+            this.TxtCategorias.Size = new System.Drawing.Size(867, 21);
+            this.TxtCategorias.TabIndex = 18;
             // 
             // label2
             // 
@@ -183,7 +186,7 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Código:";
             // 
-            // Categorias
+            // FormCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -193,19 +196,19 @@
             this.Controls.Add(this.BtnExcluir);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnAlterar);
-            this.Controls.Add(this.DGVCidades);
+            this.Controls.Add(this.DGVCategorias);
             this.Controls.Add(this.BtnIncluir);
             this.Controls.Add(this.TxtPesquisa);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TxtCidades);
+            this.Controls.Add(this.TxtCategorias);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Roboto Lt", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Name = "Categorias";
+            this.Name = "FormCategorias";
             this.Text = "Categorias";
-            ((System.ComponentModel.ISupportInitialize)(this.DGVCidades)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,11 +221,11 @@
         private System.Windows.Forms.Button BtnExcluir;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Button BtnAlterar;
-        private System.Windows.Forms.DataGridView DGVCidades;
+        private System.Windows.Forms.DataGridView DGVCategorias;
         private System.Windows.Forms.Button BtnIncluir;
         private System.Windows.Forms.TextBox TxtPesquisa;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox TxtCidades;
+        private System.Windows.Forms.TextBox TxtCategorias;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.Label label1;
